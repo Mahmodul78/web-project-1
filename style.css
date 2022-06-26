@@ -1,10 +1,18 @@
 body{
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 h1{
     font-size: 50px;
 }
-.name-highlight{
+h2{
+    font-size: 40px;
+}
+p{
+    color: dimgray;
+}
+.highlighter{
     color: #9370DB;
 }
 .half-width{
@@ -15,4 +23,120 @@ h1{
 }
 .half-width img{
     width: 100%;
+}
+#topBanner{
+    background-image: url("images/top-banner.png");
+    background-repeat: no-repeat;
+}
+section{
+    height: 500px;
+    padding-bottom: 150px;
+}
+.linkButton{
+    text-decoration: none;
+    /* background-color: #9370DB; */
+    background-image: linear-gradient( 45deg, lightSalmon, #9370DB);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+}
+#dreamArea{
+    background-image: url("images/dream-bg.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.single-experience{
+    box-shadow: 10px 10px 40px gray;
+    border-radius: 10px;
+    height: 70%;
+    background-color: #fff;
+}
+#experienceArea{
+    background-image: url("images/exp-bg.png");
+    background-repeat: no-repeat;
+    background-position: left;
+}
+#experienceArea p{
+    text-align: justify;
+}
+#fullStack{
+    border-left: 7px solid;
+    border-image: linear-gradient(180deg, lightSalmon, #9370DB);
+    border-image-slice: 1;
+    padding: 0px 17px;
+}
+#juniorDev{
+    border-left: 7px solid;
+    border-image: linear-gradient(180deg, blue, cyan);
+    border-image-slice: 1;
+    padding: 0px 17px;
+}
+footer{
+    text-align: center;
+    font-size: 17px;
+}
+
+/*----------- Media Query Start -----------*/
+
+@media only screen and (min-width:992px){
+    #experienceArea h2{
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width:768px) and (max-width:991.98px){
+    #experienceArea #fullStack,
+    #experienceArea #juniorDev{
+        width: 85%;
+        margin-bottom: 27px;
+    }
+}
+@media only screen and (max-width:767.98px){
+    #topBanner .half-width,
+    #dreamArea .half-width{
+        width: 85%;
+    }
+    #experienceArea #fullStack,
+    #experienceArea #juniorDev{
+        width: 85%;
+        margin-bottom: 27px;
+    }
+    #experienceArea h2{
+        font-size: 27px;
+    }
+    #topBanner,
+    #dreamArea,
+    #experienceArea{
+        text-align: center;
+    }
+    #topBanner .half2,
+    #dreamArea .half3{
+        display: none;
+    }
+    #topBanner .linkButton{
+        margin-top: 27px;
+    }
+    section{
+        height: 450px;
+    padding-bottom: 0px;
+    }
+}
+@media only screen and (max-width:575.98px){
+    #experienceArea #fullStack,
+    #experienceArea #juniorDev{
+        width: 80%;
+        margin-bottom: 27px;
+    }
+    #topBanner h1{
+        font-size: 37px;
+    }
+    #experienceArea h2{
+        font-size: 20px;
+    }
+    #experienceArea h3{
+        font-size: 15px;
+    }
+    #experienceArea p{
+        font-size: 13px;
+    }
 }
